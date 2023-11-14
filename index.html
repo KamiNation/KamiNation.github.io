@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="icon" href="favicon.png">
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@12.2.0/dist/markdown-it.min.js"></script>
 </head>
 <body>
   <h1>SAIL 6-Month Full Stack Developer program journey blog</h1>
@@ -14,18 +15,21 @@ This part talks about HTML elements. The HTML element is defined by a start tag,
 Syntax: <element name> some content </element name>
 -->
 <p>HTML Element</p>
+  <div id="markdown-content"></div>
   <ul>
     <li>Block level element: The block element breaks down text into the next line.</li>
     <li>In-line level element:In-line element keeps text on the same line.</li>
   </ul>
-  <markdown>
-    > **Alerts:** This part talked about HTML elements. The HTML element is defined by a start tag, some content and an end tag
+  <div id="markdown-content">
+ > **Alerts:** This part talked about HTML elements. The HTML element is defined by a start tag, some content and an end tag
     ```Syntax: <element name> some content </element name>
-  </markdown>
+</div>
+
 
 <!--
 This part talks about HTML tags. Syntax: <element name> some content </element name>
 -->
+<div id="markdown-content"></div>
 <p>HTML Tags</p>
   <ul>
     <li>Empty tags: does not need closing < > </li>
@@ -39,6 +43,16 @@ This part talks about HTML tags. Syntax: <element name> some content </element n
 
 <p>Attributes</p>
 
-  
+<script>
+  // Get the content of the div
+  var markdownText = document.getElementById('markdown-content').innerText;
+
+  // Create a Markdown-It instance
+  var md = window.markdownit();
+
+  // Convert Markdown to HTML and replace the content of the div
+  document.getElementById('markdown-content').innerHTML = md.render(markdownText);
+</script>
+
 </body>
 </html>
