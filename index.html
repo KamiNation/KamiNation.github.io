@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="icon" href="favicon.png">
-  <script src="https://cdn.jsdelivr.net/npm/markdown-it@12.2.0/dist/markdown-it.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/showdown@1.10.2/dist/showdown.min.js"></script>
 </head>
 <body>
   <h1>SAIL 6-Month Full Stack Developer program journey blog</h1>
@@ -20,16 +20,18 @@ Syntax: <element name> some content </element name>
     <li>Block level element: The block element breaks down text into the next line.</li>
     <li>In-line level element:In-line element keeps text on the same line.</li>
   </ul>
+  
   <div id="markdown-content">
- > **Alerts:** This part talked about HTML elements. The HTML element is defined by a start tag, some content and an end tag
+   > **Alerts:** This part talked about HTML elements. The HTML element is defined by a start tag, some content and an end tag
     ```Syntax: <element name> some content </element name>
+    ```
 </div>
 
 
 <!--
 This part talks about HTML tags. Syntax: <element name> some content </element name>
 -->
-<div id="markdown-content"></div>
+
 <p>HTML Tags</p>
   <ul>
     <li>Empty tags: does not need closing < > </li>
@@ -38,20 +40,22 @@ This part talks about HTML tags. Syntax: <element name> some content </element n
   </ul>
 <markdown>
   ```example: <br>
+  ```
   ```example: <element name> some content </element name>
+  ```
 </markdown>
 
 <p>Attributes</p>
 
 <script>
-  // Get the content of the div
-  var markdownText = document.getElementById('markdown-content').innerText;
+    // Get the content of the div
+    var markdownText = document.getElementById('markdown-content').innerText;
 
-  // Create a Markdown-It instance
-  var md = window.markdownit();
+    // Create a Showdown converter
+    var converter = new showdown.Converter();
 
-  // Convert Markdown to HTML and replace the content of the div
-  document.getElementById('markdown-content').innerHTML = md.render(markdownText);
+    // Convert Markdown to HTML and replace the content of the div
+    document.getElementById('markdown-content').innerHTML = converter.makeHtml(markdownText);
 </script>
 
 </body>
