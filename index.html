@@ -6,57 +6,28 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="icon" href="favicon.png">
- <script src="https://cdn.jsdelivr.net/npm/showdown@1.10.2/dist/showdown.min.js"></script>
-</head>
+ </head>
 <body>
-  <h1>SAIL 6-Month Full Stack Developer program journey blog</h1>
-<!--
-This part talks about HTML elements. The HTML element is defined by a start tag, some content in between  and an end tag
-Syntax: <element name> some content </element name>
--->
-<p>HTML Element</p>
-  <div id="markdown-content"></div>
-  <ul>
-    <li>Block level element: The block element breaks down text into the next line.</li>
-    <li>In-line level element:In-line element keeps text on the same line.</li>
-  </ul>
-  
-  <div id="markdown-content">
-   > **Alerts:** This part talked about HTML elements. The HTML element is defined by a start tag, some content and an end tag
-    ```Syntax: <element name> some content </element name>
-    ```
-</div>
+  <div class="header-container">
+    <navbar> 
+      <img src="" alt=""><a></a>
 
+      <ul>
+        <li><a>About</a></li>
+        <li><a>Projects</a></li>
+        <li><a>Blog</a></li>
+        <li><a>Photos</a></li>
+      </ul>
 
-<!--
-This part talks about HTML tags. Syntax: <element name> some content </element name>
--->
+      <div>Icon</div>
+    </navbar>
+  </div>
 
-<p>HTML Tags</p>
-  <ul>
-    <li>Empty tags: does not need closing < > </li>
-    <li>Self-closing tags: are self closing < /> </li>
-    <li>Regular tags or container tags: has an opening and closing tag <> </> </li>
-  </ul>
-<markdown>
-  ```example: <br>
-  ```
-  ```example: <element name> some content </element name>
-  ```
-</markdown>
+  <div class="body-container">
+  </div>
 
-<p>Attributes</p>
-
-<script>
-    // Get the content of the div
-    var markdownText = document.getElementById('markdown-content').innerText;
-
-    // Create a Showdown converter
-    var converter = new showdown.Converter();
-
-    // Convert Markdown to HTML and replace the content of the div
-    document.getElementById('markdown-content').innerHTML = converter.makeHtml(markdownText);
-</script>
-
+  <div class="footer-container">
+  </div>
+    
 </body>
 </html>
